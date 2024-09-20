@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .qr-code {
+            display: none;
+            margin: 20px;
+            text-align: center;
+        }
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Online Library</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        
+        <h2>QR Codes</h2>
+        <button onclick="toggleQRCode('qr1')">JAVA</button>
+        <button onclick="toggleQRCode('qr2')">OS</button>
+        <button onclick="toggleQRCode('qr3')">PYTHON</button>
+        <button onclick="toggleQRCode('qr4')">DBMS</button>
+
+        <div id="qr1" class="qr-code">
+            <img src="JAVA-QR.png" alt="java">
+        </div>
+        <div id="qr2" class="qr-code">
+            <img src="OS-QR.png" alt="Busineess">
+        </div>
+        <div id="qr3" class="qr-code">
+            <img src="PYTHON-QR.png" alt="os">
+        </div>
+        <div id="qr4" class="qr-code">
+            <img src="DBMS-QR.png" alt="Dbms">
+        </div>
+        <h2>About Us</h2>
+        <p>This is online library website.</p>
+        <h2>Contact Us</h2>
+        <p>Email: nithishbitla11@gmail.com</p>
+    </main>
+    <footer>
+        &copy; 2024 My Simple Online Library Website. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleQRCode(id) {
+            const qrCode = document.getElementById(id);
+            qrCode.style.display = (qrCode.style.display === "none" || qrCode.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
+
